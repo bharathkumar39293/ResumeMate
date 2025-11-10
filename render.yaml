@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: resumemate-api
+    env: node
+    rootDir: server
+    plan: free
+    region: oregon
+    buildCommand: npm ci
+    startCommand: npm start
+    runtime: node
+    nodeVersion: 18
+    autoDeploy: true
+    
+    # Set these in the Render Dashboard (do NOT commit secrets)
+    envVars:
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: IMAGEKIT_PUBLIC_KEY
+        sync: false
+      - key: IMAGEKIT_PRIVATE_KEY
+        sync: false
+      - key: IMAGEKIT_URL_ENDPOINT
+        sync: false
