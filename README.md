@@ -1,6 +1,6 @@
-# ResumeMate
+# ResumeMate — AI Powered Resume Builder
 
-A modern, AI-powered resume builder that helps you create professional resumes in minutes. Built with React and powered by Google Gemini AI for intelligent content suggestions.
+A modern, full-stack resume builder application that helps you create professional, ATS-friendly resumes in minutes. Features customizable templates with real-time preview, AI-powered content enhancement, and cloud storage for managing multiple resumes.
 
 ## Features
 
@@ -13,7 +13,9 @@ A modern, AI-powered resume builder that helps you create professional resumes i
 ### AI-Powered Content
 - Smart Summaries: Generate professional summaries tailored to your experience
 - Intelligent Suggestions: AI-assisted content generation for better impact
-- Powered by Google Gemini: Advanced AI for natural, professional content
+- Job Description Enhancement: AI-powered enhancement of work experience descriptions
+- PDF Resume Parsing: Upload existing PDF resumes and automatically extract content using AI
+- Powered by OpenAI API: Advanced AI for natural, professional content generation
 
 ### Comprehensive Sections
 - Personal Information with profile photo upload
@@ -23,10 +25,12 @@ A modern, AI-powered resume builder that helps you create professional resumes i
 - Projects showcase
 - Skills with proficiency levels
 
-### Cloud Storage
-- Save & Edit: Store resumes securely in the cloud
+### Cloud Storage & Management
+- Save & Edit: Store resumes securely in the cloud with auto-save functionality
 - Multiple Resumes: Create and manage unlimited resumes
-- Quick Actions: Template-based resume creation and AI-powered resume upload parsing
+- Quick Actions: Template-based resume creation and AI-powered PDF resume parsing
+- Public/Private Sharing: Share resumes publicly with shareable links or keep them private
+- Profile Image Upload: Upload and manage profile photos with background removal option
 
 ### Secure Authentication
 - JWT-based authentication
@@ -36,31 +40,41 @@ A modern, AI-powered resume builder that helps you create professional resumes i
 ## Tech Stack
 
 ### Frontend
-- React 19 - Modern UI library
-- Vite 7 - Lightning-fast build tool
-- Tailwind CSS 4 - Utility-first styling
-- Redux Toolkit - State management
-- React Router v7 - Navigation
-- Axios - HTTP client
+- **React 19** - Modern UI library with latest features
+- **Vite 7** - Lightning-fast build tool and dev server
+- **Tailwind CSS 4** - Utility-first CSS framework for styling
+- **Redux Toolkit** - State management for authentication and app state
+- **React Router v7** - Client-side routing and navigation
+- **Axios** - HTTP client for API requests
+- **React Hot Toast** - Toast notifications for user feedback
+- **Lucide React** - Modern icon library
+- **React PDF to Text** - PDF parsing for resume uploads
 
 ### Backend
-- Express 5 - Web framework
-- MongoDB - Database
-- Mongoose - ODM
-- JWT - Authentication
-- Multer - File uploads
-- ImageKit - Image storage
+- **Node.js 18+** - JavaScript runtime
+- **Express 5** - Fast, minimalist web framework
+- **MongoDB** - NoSQL database for data storage
+- **Mongoose 8** - MongoDB object modeling and ODM
+- **JWT (jsonwebtoken)** - Token-based authentication
+- **bcrypt** - Password hashing for security
+- **Multer** - File upload middleware
+- **ImageKit** - Cloud image storage and optimization
+- **CORS** - Cross-origin resource sharing
+- **dotenv** - Environment variable management
 
 ### AI Integration
-- Google Gemini 2.5 Flash - AI content generation
+- **OpenAI API** - AI content generation for resume enhancement
+  - Professional summary generation
+  - Job description enhancement
+  - Resume data extraction from PDF uploads
 
 ## Getting Started
 
 ### Prerequisites
 - Node.js 18+ 
-- MongoDB database
-- ImageKit account
-- Google AI API key
+- MongoDB database (local or cloud like MongoDB Atlas)
+- ImageKit account (for image storage)
+- OpenAI API key (for AI features)
 
 ### Installation
 
@@ -80,7 +94,9 @@ Create .env file in the server directory:
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret_key
-GEMINI_API_KEY=your_google_ai_api_key
+OPENAI_API_KEY=your_openai_api_key
+OPENAI_BASE_URL=https://api.openai.com/v1
+OPENAI_MODEL=gpt-3.5-turbo
 IMAGEKIT_PUBLIC_KEY=your_imagekit_public_key
 IMAGEKIT_PRIVATE_KEY=your_imagekit_private_key
 IMAGEKIT_URL_ENDPOINT=your_imagekit_url
@@ -153,9 +169,18 @@ Bharath Kumar
 - GitHub: @bharathkumar39293
 - Email: Bharath.ccbp@gmail.com
 
+## Key Features Implementation
+
+- **Real-time Preview**: Live preview updates as you edit your resume
+- **Template System**: 4 professional templates (Classic, Modern, Minimal, Minimal with Image)
+- **Color Customization**: Built-in color picker for accent colors
+- **PDF Export**: Print-friendly resume export functionality
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
+- **Dark Theme UI**: Modern dark interface with gradient accents
+
 ## Acknowledgments
 
-- Google Gemini AI for intelligent content generation
+- OpenAI for AI-powered content generation
 - ImageKit for image storage and optimization
 - The React and Node.js communities
 
