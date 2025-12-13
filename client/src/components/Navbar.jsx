@@ -18,14 +18,8 @@ const Navbar = () => {
   return (
     <div className='shadow bg-white'>
       <nav className='flex items-center justify-between max-w-7xl mx-auto px-4 py-3.5 text-slate-800 transition-all'>
-        <Link to='/' className='flex items-center gap-3'>
+        <Link to='/' className='flex items-center'>
             <img src="/logo.svg" alt="ResumeMate logo" className="h-8 w-auto" />
-            <div className='flex flex-col'>
-              <span className="text-[22px] leading-5 font-semibold tracking-tight text-slate-900">
-                ResumeMate
-              </span>
-              <span className='text-[11px] leading-4 text-slate-500 font-medium'>AI Powered</span>
-            </div>
         </Link>
         <div className='flex items-center gap-4 text-sm'>
             <p className='max-sm:hidden'>Hi, {user?.name}</p>

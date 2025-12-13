@@ -40,18 +40,18 @@ const Login = () => {
                 <h1 className="text-gray-900 text-3xl mt-10 font-medium">{state === "login" ? "Login" : "Sign up"}</h1>
                 <p className="text-gray-500 text-sm mt-2">Please {state} to continue</p>
                 {state !== "login" && (
-                    <div className="flex items-center mt-6 w-full bg-white border border-gray-300/80 h-12 rounded-full overflow-hidden pl-6 gap-2">
-                        <User2Icon size={16} color='#6B7280'/>
-                        <input type="text" name="name" placeholder="Name" className="border-none outline-none ring-0" value={formData.name} onChange={handleChange} required />
+                    <div className="flex items-center mt-6 w-full bg-gray-800 border border-gray-700 h-12 rounded-full overflow-hidden pl-6 gap-2">
+                        <User2Icon size={16} color='#9CA3AF'/>
+                        <input type="text" name="name" placeholder="Name" className="border-none outline-none ring-0 text-white bg-transparent placeholder-gray-400" value={formData.name} onChange={handleChange} required />
                     </div>
                 )}
-                <div className="flex items-center w-full mt-4 bg-white border border-gray-300/80 h-12 rounded-full overflow-hidden pl-6 gap-2">
-                    <Mail size={13} color="#6B7280" />
-                    <input type="email" name="email" placeholder="Email id" className="border-none outline-none ring-0" value={formData.email} onChange={handleChange} required />
+                <div className="flex items-center w-full mt-4 bg-gray-800 border border-gray-700 h-12 rounded-full overflow-hidden pl-6 gap-2">
+                    <Mail size={13} color="#9CA3AF" />
+                    <input type="email" name="email" placeholder="Email id" className="border-none outline-none ring-0 text-white bg-transparent placeholder-gray-400" value={formData.email} onChange={handleChange} required />
                 </div>
-                <div className="flex items-center mt-4 w-full bg-white border border-gray-300/80 h-12 rounded-full overflow-hidden pl-6 gap-2">
-                    <Lock size={13} color="#6B7280"/>
-                    <input type="password" name="password" placeholder="Password" className="border-none outline-none ring-0" value={formData.password} onChange={handleChange} required />
+                <div className="flex items-center mt-4 w-full bg-gray-800 border border-gray-700 h-12 rounded-full overflow-hidden pl-6 gap-2">
+                    <Lock size={13} color="#9CA3AF"/>
+                    <input type="password" name="password" placeholder="Password" className="border-none outline-none ring-0 text-white bg-transparent placeholder-gray-400" value={formData.password} onChange={handleChange} required />
                 </div>
                 <div className="mt-4 text-left text-green-500">
                     <button className="text-sm" type="reset">Forget password?</button>
